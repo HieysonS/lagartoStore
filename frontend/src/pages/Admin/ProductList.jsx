@@ -61,6 +61,7 @@ const ProductList = () => {
       toast.success(res.message);
       setImage(res.image);
       setImageUrl(res.image);
+      console.log(imageUrl)
     } catch (error) {
       toast.error(error?.data?.message || error.error);
     }
