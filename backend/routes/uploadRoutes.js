@@ -1,14 +1,20 @@
 import path from "path";
 import express from "express";
 import multer from "multer";
+import fs from "fs";
 
 const router = express.Router();
 
+
+const uploadDir = "uploads/";
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/");
+    cb(null, uploadDir);
   },
-
   filename: (req, file, cb) => {
     const extname = path.extname(file.originalname);
     cb(null, `${file.fieldname}-${Date.now()}${extname}`);
@@ -18,7 +24,6 @@ const storage = multer.diskStorage({
 const fileFilter = (req, file, cb) => {
   const filetypes = /jpe?g|png|webp/;
   const mimetypes = /image\/jpe?g|image\/png|image\/webp/;
-
   const extname = path.extname(file.originalname).toLowerCase();
   const mimetype = file.mimetype;
 
