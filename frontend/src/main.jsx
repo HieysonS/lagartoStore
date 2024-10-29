@@ -20,6 +20,7 @@ import AllProducts from "./pages/Admin/AllProducts.jsx";
 // Auth
 import Login from "./pages/Auth/Login.jsx";
 import Register from "./pages/Auth/Register.jsx";
+import Home from "./pages/Home.jsx";
 
 // Perfil
 import Profile from "./pages/User/Profile.jsx";
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route index={true} path="/" element={<Home/>}/>
       
       <Route path="" element={<PrivateRoute/>}>
         <Route path="/profile" element={ <Profile/> } />
@@ -42,7 +44,6 @@ const router = createBrowserRouter(
         <Route path="allproductslist" element={<AllProducts/>}/>
         <Route path="product/update/:_id" element={<UpdateProduct/>}/>
       </Route>
-
     </Route>
 
   )
