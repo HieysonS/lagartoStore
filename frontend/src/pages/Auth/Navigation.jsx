@@ -13,6 +13,7 @@ import "./Navigation.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useLoginMutation, useLogoutMutation } from "../../redux/api/usersApiSlice.js";
 import { logout } from "../../redux/features/auth/authSlice";
+import FavoritesCount from "../Products/FavoritesCount";
 
 const Navigation = () => {
 
@@ -84,7 +85,7 @@ const Navigation = () => {
         </Link>
 
         <Link 
-          to="/favorite" 
+          to="/favorite"
           className="flex relative"
         >
           <div className="flex justify-center items-center transition-transform transform hover:translate-x-2">
@@ -92,6 +93,7 @@ const Navigation = () => {
             <span className="hidden nav-item-name mt-[3rem]">
               Favorites
             </span>{" "}
+            <FavoritesCount />
           </div>
         </Link>
       </div>
