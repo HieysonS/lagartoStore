@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectFavoriteProduct } from "../../redux/features/favorites/favoriteSlice";
 import Product from "./Product";
@@ -8,7 +9,7 @@ const Favorites = () => {
   return (
     <div className="ml-[10rem]">
       <h1 className="text-lg font-bold ml-[3rem] mt-[3rem]">
-        FAVORITE PRODUCTS
+        FAVORITE PRODUCTS - <Link to="/">Go To Home</Link>
       </h1>
 
       <div className="flex flex-wrap">
