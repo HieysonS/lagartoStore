@@ -18,12 +18,12 @@ const ProductCarousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 5000,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
   };
 
   return (

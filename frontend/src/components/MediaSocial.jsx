@@ -5,6 +5,9 @@ const Card = () => {
   return (
     <StyledWrapper>
       <div className="card">
+        <p className="text-sm px-14 text-pink-500 mt-4">
+            <strong>Our Social Media - Contact Us Now!</strong>
+        </p>
         <ul>
           <li className="iso-pro">
             <span />
@@ -86,7 +89,7 @@ const StyledWrapper = styled.div`
     height: 60px;
     width: 60px;
     border-radius: 100%;
-    color: rgb(255, 174, 0);
+    color: rgb(50, 50, 255);
     fill: currentColor;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
       inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
@@ -97,8 +100,8 @@ const StyledWrapper = styled.div`
     border-radius: 5px;
     padding: 5px;
     transition: all 0.3s;
-    color: rgb(255, 174, 0);
-    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     z-index: 9999;
     box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
