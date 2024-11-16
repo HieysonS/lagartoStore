@@ -5,9 +5,9 @@ const LinksLP = () => {
   return (
     <StyledWrapper>
       <div className="card mt-24">
-        <p><a href="/weare"><span>How We Are</span></a></p>
-        <p><a href="/wedo"><span>What We Do</span></a></p>
-        <p><a href="/reward"><span>Rewards (Coming soon!)</span></a></p>
+        <p><a href="/weare"><span>Who are we?</span></a></p>
+        <p><a href="/wedo"><span>What do we do?</span></a></p>
+        <p><a href="/reward"><span>Proyects</span></a></p>
       </div>
     </StyledWrapper>
   );
